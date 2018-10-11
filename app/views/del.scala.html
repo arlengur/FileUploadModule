@@ -1,0 +1,9 @@
+@(fileForm: play.api.data.Form[controllers.UpFile])(implicit request: MessagesRequestHeader)
+@import helper._
+@main {
+    <h1>Delete a file:</h1>
+    @form(action = routes.FilesController.del) {
+        @inputText(fileForm("id"))
+        <input type="submit" value="Delete">
+    }
+}
